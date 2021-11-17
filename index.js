@@ -7,7 +7,7 @@ const db = require('./models');
 
 app.use(express.json());
 app.use(cors());
-let port = env.process.env.PORT || 3001;
+let port = process.env.PORT || 3001;
 db.sequelize.sync().then(()=>{
     app.listen(port,()=>{
         console.log("SERVER IS RUNNING ON 3001 PORT");
